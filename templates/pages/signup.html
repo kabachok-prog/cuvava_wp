@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <title>MDsimple</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="top-left-side">
+                    <div class="nav-bottom">
+                        <nav class="header__nav nav-bar">
+                            <div class="toggle-menu">
+                                <div class="line line1"></div>
+                                <div class="line line2"></div>
+                                <div class="line line3"></div>
+                            </div>
+                            <div class="ul" style="display: flex; flex-direction: column;">
+                                <ul class="nav-list">
+                                    <li class="nav-list-item"><a href="/index.html" class="nav-link">Home</a></li>
+                                    <li class="nav-list-item"><a href="/pages/doctor.html" class="nav-link">Doctor</a></li>
+                                    <li class="nav-list-item">
+                                        <a href="/pages/dispensaries.html" class="nav-link">Dispensaries</a>
+                                    </li>
+                                    <li class="nav-list-item"><a href="/pages/products.html" class="nav-link">Products</a></li>
+                                    <li class="nav-list-item">
+                                        <a href="/pages/blog.html" class="nav-link">Blog</a>
+                                    </li>
+                                </ul>
+                                <ul class="nav-list" style="flex-direction: row; margin-top: 50px;">
+                                    <li class="nav-list-item"><a href="/pages/logIn.html" class="nav-link">Log In</a></li>
+                                    <li class="nav-list-item" style="margin-left: 30px;"><a href="/pages/signup.html" class="nav-link">Sign Up</a></li>
+                                </ul>
+                            </div>  
+                        </nav>
+                    </div>
+                    <div class="logo">
+                        <img src="../img/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="profile">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="header-list">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/doctor.html">Doctor</a></li>
+                    <li><a href="/pages/dispensaries.html">Dispensaries</a></li>
+                    <li><a href="/pages/products.html">Products</a></li>
+                    <li><a href="/pages/blog.html">Blog</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/pages/logIn.html">Log In</a></li>
+                    <li><a href="/pages/signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section style="max-width: 443px;">
+        <div class="signup__content">
+            <div class="signup__text">
+                Fill out your Medical Form
+            </div>
+            <form class="signup__form" action="post">
+                <label for="firstname" class="label-signup">Name <span>*</span></label> <br>
+                <div class="signup__name" style="display: flex; margin-bottom: 25px;">
+                    <input style="width: 211px;" class="signup__input" type="text" id="firstname" placeholder="First Name">
+                    <input style="width: 211px;" class="signup__input" type="text" id="lastname" placeholder="Last Name">
+                </div>
+                
+                <label for="date" class="label-signup">Date of Birth <span>*</span></label> <br>
+                <input style="width: 211px; margin-bottom: 25px;" class="signup__input" type="date" id="date" placeholder="MM-DD-YYYY"> <br>
+
+                <label for="gender" class="label-signup">Gender <span>*</span></label> <br>
+                <select style="width: 211px; margin-bottom: 25px;" class="signup__input" name="gender" id="gender">
+                    <option value="Please Select" selected disabled>Please Select</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other"></option>
+                </select> <br>
+
+                <label for="address" class="label-signup">Address <span>*</span></label> <br>
+
+                <input style="width: 443px;" class="signup__input" type="text" name="address" id="street" placeholder="Street Address"> <br>
+
+                <input style="width: 443px;" class="signup__input" type="text" name="address2" id="street2" placeholder="Street Address Line 2"> <br>
+
+                <div class="city-state" style="display: flex;">
+
+                    <input style="width: 211px;" class="signup__input" type="text" name="city" id="city" placeholder="City">
+
+                    <input style="width: 211px;" class="signup__input" type="text" name="state" id="state" placeholder="State / Province">
+                </div>
+
+                <input style="width: 443px; margin-bottom: 25px;" class="signup__input" type="text" name="zip" id="zip" placeholder="Postal / Zip Code">
+
+                <div class="phone-email" style="display: flex; margin-bottom: 25px;">
+
+                    <div class="phone">
+                        <label for="phone" class="label-signup">Phone <span>*</span></label> <br>
+                        <input style="width: 211px;" class="signup__input" type="text" name="phone" id="phone" placeholder="(000) 000-0000">
+                    </div>
+
+                    <div class="email">
+                        <label for="email" class="label-signup">Email <span>*</span></label> <br>
+                        <input style="width: 211px;" class="signup__input" type="text" name="email" id="email" placeholder="example@example.com">
+                    </div>
+
+                </div>
+
+                <label for="taking" class="label-signup">Are you taking any medications? <span>*</span></label> <br>
+                <select style="width: 266px; margin-bottom: 25px;" class="signup__input" name="taking" id="taking">
+                    <option value="Please Select" selected disabled>Please Select</option>
+                    <option value="1">1</option>
+                </select> <br>
+
+                <label style="width: 328px; margin-bottom: 25px;" for="whattaking" class="label-signup">What medication are you currently taking?</label> <br>
+                <input class="signup__input" type="text" name="whattaking" id="whattaking"> <br>
+
+                <label for="halluc" class="label-signup">Have you ever experienced hallucinations before? <span>*</span></label> <br>
+                <select style="width: 399px; margin-bottom: 25px;" class="signup__input" name="halluc" id="halluc">
+                    <option value="Please Select" selected disabled>Please Select</option>
+                    <option value="1">1</option>
+                </select> <br>
+
+                <label for="schizo" class="label-signup">Have you ever been diagnosed with schizophrenia? <span>*</span></label> <br>
+                <select style="width: 411px; margin-bottom: 25px;" class="signup__input" name="schizo" id="schizo">
+                    <option value="Please Select" selected disabled>Please Select</option>
+                    <option value="1">1</option>
+                </select> <br>
+
+                <label for="bipolar" class="label-signup">Do you have any history of bipolar disorder? <span>*</span></label> <br>
+                <select style="width: 354px;" class="signup__input" name="bipolar" id="bipolar">
+                    <option value="Please Select" selected disabled>Please Select</option>
+                    <option value="1">1</option>
+                </select> <br>
+
+                <input type="submit" name="submit-signup" id="submit-signup" value="Sign Up">
+            </form>
+        </div>
+    </section>
+    
+    <footer style="width: 100%;">
+        <div class="footer__first">
+            <img src="../img/logo-footer.png" alt="">
+        </div>
+        <div class="footer__second">
+            <div class="social">
+                <a href="#">
+                    <img src="../img/facebook.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="../img/instagram.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="../img/youtube.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="../img/twitter.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="footer__third">
+            <div class="header-list" style="margin: auto; margin-top: 20px;">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/doctor.html">Doctor</a></li>
+                    <li><a href="/pages/dispensaries.html">Dispensaries</a></li>
+                    <li><a href="/pages/products.html">Products</a></li>
+                    <li><a href="/pages/blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="atten__block">
+                *Statements made on this website have not been evaluated by the US. Food and Drug Administration. These products are not intended to diagnose treat, cure or prevent any disease. Information provided by this website or this company is not a substitute for individual medical advice. 
+            </div>
+            <div class="copyright">
+                <div class="address">
+                    2361 CONEY ISLAND AVENUE, BROOKLYN, NEW YORK 11223, UNITED STATES
+                </div>
+                <a href="tel:+18336374675">833-637-4675</a>
+                <div class="copy">
+                    COPYRIGHT © 2022 MDSIMPLE - ALL RIGHTS RESERVED.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../index.js"></script>
+</body>
+</html>
