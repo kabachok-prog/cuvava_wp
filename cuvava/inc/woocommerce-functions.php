@@ -85,11 +85,11 @@ function custom_stars() {
     else {
         $rating_count = $product->get_rating_count();
         $review_count = $product->get_review_count();
-        $average      = 4.8;
+        $average      = $product->get_average_rating();
 
         if ( $rating_count === 0 || $rating_count ) : ?>
             <div class="woocommerce-product-rating" itemprop="aggregateRating" itemscope itemtype="http://schema.org/AggregateRating">
-                <span class="num-rating"><? echo $average;?></span>
+                <span><? echo $average;?></span>
                 <div class="star-rating" title="<?php printf( __( 'Rated %s out of 5', 'woocommerce' ), $average ); ?>">
                     <span style="width:<?php echo ( ( $average / 5 ) * 100 ); ?>%">
                         <strong itemprop="ratingValue" class="rating"><?php echo esc_html( $average ); ?></strong> <?php printf( __( 'out of %s5%s', 'woocommerce' ), '<span itemprop="bestRating">', '</span>' ); ?>
@@ -100,19 +100,4 @@ function custom_stars() {
         <?php endif;
     }
 }
-	
-	remove_action('woocommerce_before_shop_loop_item', 'woocommerce_template_loop_product_link_open', 10);
-	function custom_woocommerce_template_loop_product_link_open() {
-	  ob_start();
-		woocommerce_template_loop_add_to_cart();
-	  $custom_woocommerce_template_loop_product_link_open = ob_get_clean();
-
-	  preg_match('/<a.*?>/', $custom_woocommerce_template_loop_product_link_open, $link_open_arr);
-
-	  if($link_open_arr && $link_open_arr[0]) {
-		$custom_woocommerce_template_loop_product_link_open = str_replace('class="', 'class="woocommerce-LoopProduct-link woocommerce-loop-product__link', $link_open_arr[0]);
-		echo $custom_woocommerce_template_loop_product_link_open;
-	  }
-	}
-	add_action('woocommerce_before_shop_loop_item', 'custom_woocommerce_template_loop_product_link_open', 10);
 }
