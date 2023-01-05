@@ -37,19 +37,16 @@
 								<div class="line line3"></div>
 							</div>
 							<div class="ul" style="display: flex; flex-direction: column;">
-								<ul class="nav-list">
-									<li class="nav-list-item"><a href="/index.html" class="nav-link">Home</a></li>
-									<li class="nav-list-item"><a href="/pages/doctor.html" class="nav-link">Doctor</a>
-									</li>
-									<li class="nav-list-item">
-										<a href="/pages/dispensaries.html" class="nav-link">Dispensaries</a>
-									</li>
-									<li class="nav-list-item"><a href="/pages/products.html"
-											class="nav-link">Products</a></li>
-									<li class="nav-list-item">
-										<a href="/pages/blog.html" class="nav-link">Blog</a>
-									</li>
-								</ul>
+								<?php
+								wp_nav_menu(
+									array(
+										'theme_location' => 'menu-1',
+										'menu_id' => 'primary-menu',
+										'menu_class' => 'nav-list',
+										// 'container' => 'nav'
+									)
+								);
+								?>
 								<ul class="nav-list" style="flex-direction: row; margin-top: 50px;">
 									<li class="nav-list-item"><a href="/pages/logIn.html" class="nav-link">Log In</a>
 									</li>
@@ -62,10 +59,7 @@
 					<a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
 						<img src="<?php bloginfo('template_url') ?>/assets/img/logo.png" alt="">
 					</a>
-					<form class="search__form">
-						<input class="search__form-input" type="text" name="text" class="search" placeholder="Dispensaties, doctors, products...">
-						<!-- <input type="submit" name="submit" class="submit" value="Search"> -->
-					</form>
+					<!-- <?php get_search_form() ?> -->
 				</div>
 				<div class="profile">
 					<img src="" alt="">
@@ -76,7 +70,7 @@
 				wp_nav_menu(
 					array(
 						'theme_location' => 'menu-1',
-						'menu_id' => 'primary-menu',
+						'menu_id' => 'header-menu',
 						'menu_class' => 'cf',
 						'container' => 'nav'
 					)

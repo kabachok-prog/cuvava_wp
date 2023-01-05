@@ -49,7 +49,8 @@ function cuvava_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'cuvava' ),
+			'menu-1' => esc_html__( 'Header', 'cuvava' ),
+			'menu-2' => esc_html__( 'Footer', 'cuvava' ),
 		)
 	);
 
@@ -133,6 +134,17 @@ function cuvava_widgets_init() {
 	);
 }
 add_action( 'widgets_init', 'cuvava_widgets_init' );
+
+
+// Contact Form 7 remove span and br
+
+add_filter('wpcf7_form_elements', function($content) {
+    $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
+
+	$content = str_replace('<br />', '', $content);
+
+    return $content;
+});
 
 /**
  * Enqueue scripts and styles.
