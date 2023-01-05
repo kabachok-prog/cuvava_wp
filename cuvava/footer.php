@@ -10,6 +10,7 @@
  */
 
 ?>
+
 <footer style="width: 100%;">
     <div class="footer__first">
         <img src="<?php bloginfo('template_url') ?>/assets/img/logo-footer.png" alt="">
