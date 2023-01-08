@@ -75,8 +75,8 @@
 						'menu_class' => 'cf',
 						'container' => 'nav'
 					)
-				);
-       </div>
+				); ?>
+		</div>
     </div>
 </header>
 
