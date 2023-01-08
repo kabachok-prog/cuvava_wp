@@ -12,18 +12,19 @@
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
-
 <head>
-	<meta charset="<?php bloginfo('charset'); ?>">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-	<title>MDsimple</title>
 
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'cuvava' ); ?></a>
+
 
 	<header>
 		<div class="header-container">
@@ -74,19 +75,9 @@
 						'menu_class' => 'cf',
 						'container' => 'nav'
 					)
-				);
-				?>
-				<!-- <ul class="cf">
-					<li><a href="/index.html">Home</a></li>
-					<li><a href="./pages/doctor.html">Doctor</a></li>
-					<li><a href="./pages/dispensaries.html">Dispensaries</a></li>
-					<li><a href="./pages/products.html">Products</a></li>
-					<li><a href="./pages/blog.html">Blog</a></li>
-				</ul>
-				<ul class="cf">
-					<li><a href="/pages/logIn.html">Log In</a></li>
-					<li><a href="/pages/signup.html">Sign Up</a></li>
-				</ul> -->
-			</div>
-		</div>
-	</header>
+				); ?>
+       </div>
+    </div>
+</header>
+
+	
