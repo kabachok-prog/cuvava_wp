@@ -29,6 +29,9 @@
 		<div class="header-container">
 			<div class="header-top">
 				<div class="top-left-side">
+					<a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
+						<img src="<?php bloginfo('template_url') ?>/assets/img/logo.png" alt="">
+					</a>
 					<div class="nav-bottom">
 						<nav class="header__nav nav-bar">
 							<div class="toggle-menu">
@@ -56,9 +59,6 @@
 							</div>
 						</nav>
 					</div>
-					<a class="logo" href="<?php echo esc_url(home_url('/')); ?>">
-						<img src="<?php bloginfo('template_url') ?>/assets/img/logo.png" alt="">
-					</a>
 					<!-- <?php get_search_form() ?> -->
 				</div>
 				<div class="profile">

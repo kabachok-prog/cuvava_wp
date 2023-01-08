@@ -69,6 +69,28 @@ header {
     width: 475px;
 }
 
+.logo {
+    margin-left: 59px;
+}
+
+@media (max-width: 550px) {
+    .logo {
+        margin-left: 13px;
+    }
+}
+
+@media (max-width: 450px) {
+    .logo {
+        margin-left: -41px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        margin-left: -60px;
+    }
+}
+
 @media (max-width: 1130px) {
 
     header {
@@ -961,6 +983,10 @@ footer {
     align-items: center;
     margin-top: 50px;
     flex-wrap: wrap;
+    border-radius: 6px;
+    max-width: 1136px;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
 .login__text {
@@ -985,6 +1011,8 @@ footer {
 .login__form {
     text-align: center;
     max-width: 270px;
+    margin-top: 36px;
+    margin-bottom: 57px;
 }
 
 @media (max-width: 1130px) {
@@ -1016,19 +1044,27 @@ footer {
     margin-top: 10px;
 }
 
-.login__input {
-    background: #FFFFFF;
-    border-radius: 5px;
-    width: 270px;
-    height: 36.11px;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 15px;
-    padding-left: 10px;
-    color: #8D8D8D;
-    border: none;
-    margin-top: 10px;
+#wpforms-95 {
+    margin-bottom: 0;
 }
+
+
+#wpforms-95-field_1,
+#wpforms-95-field_2,
+#wpforms-95-field_4 {
+    background: #FFFFFF;
+    border-radius: 5px !important;
+    width: 270px !important;
+    height: 36.11px !important;
+    font-weight: 400 !important;
+    font-size: 14px !important;
+    line-height: 15px !important;
+    padding-left: 10px !important;
+    color: #8D8D8D !important;
+    border: none !important;
+    margin-top: 10px !important;
+}
+
 
 .login__label-check {
     display: flex;
@@ -1037,31 +1073,36 @@ footer {
     margin-top: 20px;
 }
 
-#check {
-    border-radius: 5px;
-    border: none;
-    width: 20px;
-    height: 20px;
+#wpforms-95-field_5_1 {
+    border-radius: 5px !important;
+    border: none !important;
+    width: 20px !important;
+    height: 20px !important;
 }
 
-.login__label {
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 12px;
-    color: #000000;
+.choice-1 {
+    display: flex;
+    align-items: center;
 }
 
-.login__button {
-    background: #1C853F;
-    border-radius: 20px;
-    width: 282px;
-    height: 44px;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 18px;
-    color: #FFFFFF;
-    border: none;
-    margin-top: 24px;
+.wpforms-field-label-inline {
+    font-weight: 400 !important;
+    font-size: 10px !important;
+    line-height: 12px !important;
+    color: #000000 !important;
+}
+
+#wpforms-submit-95 {
+    background: #1C853F !important;
+    border-radius: 20px !important;
+    width: 270px !important;
+    height: 44px !important;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    line-height: 18px !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    /* margin-top: 24px !important; */
 }
 
 .register {
@@ -1282,7 +1323,7 @@ html {
     background-color: rgb(255, 255, 255);
     z-index: 100;
     position: fixed;
-    top: 69px;
+    top: 81px;
     left: 130px;
     width: 40px;
     height: 30px;
