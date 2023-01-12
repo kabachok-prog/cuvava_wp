@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <link rel="stylesheet" href="../style.css">
+    <title>MDsimple</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="top-left-side">
+                    <div class="nav-bottom">
+                        <nav class="header__nav nav-bar">
+                            <div class="toggle-menu">
+                                <div class="line line1"></div>
+                                <div class="line line2"></div>
+                                <div class="line line3"></div>
+                            </div>
+                            <div class="ul" style="display: flex; flex-direction: column;">
+                                <ul class="nav-list">
+                                    <li class="nav-list-item"><a href="/index.html" class="nav-link">Home</a></li>
+                                    <li class="nav-list-item"><a href="/pages/doctor.html" class="nav-link">Doctor</a></li>
+                                    <li class="nav-list-item">
+                                        <a href="/pages/dispensaries.html" class="nav-link">Dispensaries</a>
+                                    </li>
+                                    <li class="nav-list-item"><a href="/pages/products.html" class="nav-link">Products</a></li>
+                                    <li class="nav-list-item">
+                                        <a href="/pages/blog.html" class="nav-link">Blog</a>
+                                    </li>
+                                </ul>
+                                <ul class="nav-list" style="flex-direction: row; margin-top: 50px;">
+                                    <li class="nav-list-item"><a href="/pages/logIn.html" class="nav-link">Log In</a></li>
+                                    <li class="nav-list-item" style="margin-left: 30px;"><a href="/pages/signup.html" class="nav-link">Sign Up</a></li>
+                                </ul>
+                            </div>  
+                        </nav>
+                    </div>
+                    <div class="logo">
+                        <img src="../img/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="profile">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="header-list">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/doctor.html">Doctor</a></li>
+                    <li><a href="/pages/dispensaries.html">Dispensaries</a></li>
+                    <li><a href="/pages/products.html">Products</a></li>
+                    <li><a href="/pages/blog.html">Blog</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/pages/logIn.html">Log In</a></li>
+                    <li><a href="/pages/signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="map__dispensaries">
+            <div class="map__list">
+                <div class="list__title">Find weed dispensaries near you</div>
+                <div class="map__list-cards">
+                    <div class="map__card">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="map__dis">
+                <div id="map"></div>
+            </div>
+        </div>
+    </section>
+    
+    <footer style="width: 100%;">
+        <div class="footer__first">
+            <img src="../img/logo-footer.png" alt="">
+        </div>
+        <div class="footer__second">
+            <div class="social">
+                <a href="#">
+                    <img src="../img/facebook.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="../img/instagram.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="../img/youtube.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="../img/twitter.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="footer__third">
+            <div class="header-list" style="margin: auto; margin-top: 20px;">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/doctor.html">Doctor</a></li>
+                    <li><a href="/pages/dispensaries.html">Dispensaries</a></li>
+                    <li><a href="/pages/products.html">Products</a></li>
+                    <li><a href="/pages/blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="atten__block">
+                *Statements made on this website have not been evaluated by the US. Food and Drug Administration. These products are not intended to diagnose treat, cure or prevent any disease. Information provided by this website or this company is not a substitute for individual medical advice. 
+            </div>
+            <div class="copyright">
+                <div class="address">
+                    2361 CONEY ISLAND AVENUE, BROOKLYN, NEW YORK 11223, UNITED STATES
+                </div>
+                <a href="tel:+18336374675">833-637-4675</a>
+                <div class="copy">
+                    COPYRIGHT © 2022 MDSIMPLE - ALL RIGHTS RESERVED.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBvFEJaJabIaWf7TxzUyahPDnDSLWaTCyA&callback=initMap&v=weekly"
+      defer
+    ></script>
+    <script>
+        // Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  const uluru = { lat: -25.344, lng: 131.031 };
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 4,
+    center: uluru,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+}
+
+window.initMap = initMap;
+    </script>
+    <script src="../index.js"></script>
+</body>
+</html>

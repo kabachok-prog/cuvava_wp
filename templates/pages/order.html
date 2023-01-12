@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <title>MDsimple</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-top">
+                <div class="top-left-side">
+                    <div class="nav-bottom">
+                        <nav class="header__nav nav-bar">
+                            <div class="toggle-menu">
+                                <div class="line line1"></div>
+                                <div class="line line2"></div>
+                                <div class="line line3"></div>
+                            </div>
+                            <div class="ul" style="display: flex; flex-direction: column;">
+                                <ul class="nav-list">
+                                    <li class="nav-list-item"><a href="/index.html" class="nav-link">Home</a></li>
+                                    <li class="nav-list-item"><a href="/pages/doctor.html" class="nav-link">Doctor</a></li>
+                                    <li class="nav-list-item">
+                                        <a href="/pages/dispensaries.html" class="nav-link">Dispensaries</a>
+                                    </li>
+                                    <li class="nav-list-item"><a href="/pages/products.html" class="nav-link">Products</a></li>
+                                    <li class="nav-list-item">
+                                        <a href="/pages/blog.html" class="nav-link">Blog</a>
+                                    </li>
+                                </ul>
+                                <ul class="nav-list" style="flex-direction: row; margin-top: 50px;">
+                                    <li class="nav-list-item"><a href="/pages/logIn.html" class="nav-link">Log In</a></li>
+                                    <li class="nav-list-item" style="margin-left: 30px;"><a href="/pages/signup.html" class="nav-link">Sign Up</a></li>
+                                </ul>
+                            </div>  
+                        </nav>
+                    </div>
+                    <div class="logo">
+                        <img src="../img/logo.png" alt="">
+                    </div>
+                </div>
+                <div class="profile">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="header-list">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/doctor.html">Doctor</a></li>
+                    <li><a href="/pages/dispensaries.html">Dispensaries</a></li>
+                    <li><a href="/pages/products.html">Products</a></li>
+                    <li><a href="/pages/blog.html">Blog</a></li>
+                </ul>
+                <ul>
+                    <li><a href="/pages/logIn.html">Log In</a></li>
+                    <li><a href="/pages/signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section style="max-width: 443px;">
+        <div class="signup__content">
+            <div class="signup__text">
+                Fill out your Medical Form
+            </div>
+            <form class="signup__form" action="post">
+                
+                <label for="history" class="label-signup">What is your medical history like? <span>*</span></label> <br>
+                <select style="width: 354px;" class="signup__input" name="history" id="history">
+                    <option value="Please Select" selected disabled>Please Select</option>
+                    <option value="1">1</option>
+                </select> <br> <br>
+
+                <label for="dealing" class="label-signup">How long have you been dealing with this pain, in month/year? <span>*</span></label> <br>
+                <input style="width: 354px;" class="signup__input" type="text" name="dealing" id="dealing"> <br><br>
+
+                <label for="condition" class="label-signup">What condition are you dealing with ie chronic pain seizures? <span>*</span></label> <br>
+                <input style="width: 354px;" class="signup__input" type="text" name="condition" id="condition"><br><br>
+
+                <label for="stateid" class="label-signup">Driver's License/State ID Card <span>*</span></label> <br>
+                <input style="width: 354px;" class="signup__input" type="file" name="stateid" id="stateid" placeholder="Click or Drag and drop files here"><br><br>
+
+                <label for="medical" class="label-signup">Medical Documentation:</label> <br>
+                <input style="width: 354px;" class="signup__input" type="file" name="medical" id="medical" placeholder="Click or Drag and drop files here"><br><br>
+
+                <label for="hear" class="label-signup">How did you hear about us?</label> <br>
+                <input style="width: 354px;" class="signup__input" type="text" name="hear" id="hear"><br><br>
+
+                <label for="" class="label-signup">My Products <span>*</span></label> <br> <br>
+
+                <div class="product__check">
+                    <div class="check__text">
+                        <div class="order__checkbox">
+                            <input class="order-checkbox" type="checkbox" name="evaluation" id="evaluation"> 
+                        </div>
+                        <div class="order__checkbox-text">
+                            <label class="order__product-title" for="evaluation">Medical Marijuana Card Evaluation</label> <br>
+                            <label class="order__product-subtitle" for="evaluation">The $199 fee includes your consultation fee, physician copay, and the medical evaluation for your recommendation. PAYMENT IS FULLY approved REFUNDABLE IF YOU ARE NOT GET APPROVED</label>
+                        </div>
+                    </div>
+                    <div class="check__sum">
+                        $199.00
+                    </div>
+                </div>
+
+                <div class="product__check">
+                    <div class="check__text">
+                        <div class="order__checkbox">
+                            <input class="order-checkbox" type="checkbox" name="renewal" id="renewal"> 
+                        </div>
+                        <div class="order__checkbox-text">
+                            <label class="order__product-title" for="renewal">Renewal</label> <br>
+                            <label class="order__product-subtitle" for="renewal">The $169 fee includes your consultation fee, physician copay, and the medical evaluation renewal for your recommendation. PAYMENT IS FULLY REFUNDABLE IF YOU ARE NOT GET APPROVED</label>       
+                        </div>
+                    </div>
+                    <div class="check__sum">
+                        $169.00
+                    </div>
+                </div>
+
+                <div class="product__check">
+                    <div class="check__text">
+                        <div class="order__checkbox">
+                            <input class="order-checkbox" type="checkbox" name="consultation" id="consultation"> 
+                        </div>
+                        <div class="order__checkbox-text">
+                            <label class="order__product-title" for="consultation">Consultation</label> <br>
+                            <label class="order__product-subtitle" for="consultation">The $59 fee includes your consultation fee, physician copay.</label>
+                        </div>
+                    </div>
+                    <div class="check__sum">
+                        $59.00
+                    </div>
+                </div>
+
+                <div class="order__total">
+                    <div class="total__text">Total</div>
+                    <div class="total__sum">$0.00</div>
+                </div>
+
+                <input type="submit" name="submit-signup" id="submit-signup" value="Submit">
+            </form>
+        </div>
+    </section>
+    
+    <footer style="width: 100%;">
+        <div class="footer__first">
+            <img src="../img/logo-footer.png" alt="">
+        </div>
+        <div class="footer__second">
+            <div class="social">
+                <a href="#">
+                    <img src="../img/facebook.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="../img/instagram.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="../img/youtube.png" alt="">
+                </a>
+                <a href="#">
+                    <img src="../img/twitter.png" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="footer__third">
+            <div class="header-list" style="margin: auto; margin-top: 20px;">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/pages/doctor.html">Doctor</a></li>
+                    <li><a href="/pages/dispensaries.html">Dispensaries</a></li>
+                    <li><a href="/pages/products.html">Products</a></li>
+                    <li><a href="/pages/blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="atten__block">
+                *Statements made on this website have not been evaluated by the US. Food and Drug Administration. These products are not intended to diagnose treat, cure or prevent any disease. Information provided by this website or this company is not a substitute for individual medical advice. 
+            </div>
+            <div class="copyright">
+                <div class="address">
+                    2361 CONEY ISLAND AVENUE, BROOKLYN, NEW YORK 11223, UNITED STATES
+                </div>
+                <a href="tel:+18336374675">833-637-4675</a>
+                <div class="copy">
+                    COPYRIGHT © 2022 MDSIMPLE - ALL RIGHTS RESERVED.
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../index.js"></script>
+</body>
+</html>
